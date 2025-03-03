@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELF CARE SYNERGY</title>
+    <style>
+        body {
+            background: url(Untitled\ design.png);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            margin: 0; 
+            padding: 0; 
+        }
+        * {
+            text-decoration: none;
+        }
+        
+        .navbar {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            padding:15px;
+            position: sticky; 
+            top: 0;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .navbar.scrolled {
+            background-color: rgb(13, 9, 9);}
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo a {
+            font-size: 25px;
+            color: rgb(42, 139, 119);
+            font-weight: 600;
+            margin-left: 150px;
+            padding:15px 15px;
+        }
+        .logo a:hover {
+            color: white;
+            border: 2px solid transparent;
+            padding: 15px 15px;
+        }
+        li {
+            list-style: none; 
+            display: inline-block;
+            width: 100px;
+        }
+        li a {
+            color: rgb(42, 139, 119);
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: 10px;
+            border: 2px solid transparent;
+            border-radius: 100px;
+            padding: 5px 5px;
+        }
+        li a:hover {
+            color: white;
+            background-color: rgb(42, 139, 119);
+            border: 2px solid rgb(42, 139, 119);
+        }
+        li a:active{
+            color: white;
+            background-color: rgb(42, 139, 119);
+            border: 2px solid rgb(42, 139, 119);
+        }
+
+        .gets{
+            height: 45vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 120px;
+            margin-left: 150px;
+        }
+
+        .gets .box1{
+            background: url(new\ Screenshot\ 2025-03-02\ 224433.png);
+            background-position: center;
+            background-size: 500px;
+            position: absolute; 
+            top: 20%; 
+            left: 30%; 
+            transform: translateX(-50%); 
+            width: 370px; 
+            height:350px; 
+            border: 2px solid transparent; 
+            box-shadow: 0px 0px 10px rgb(0, 0, 0); 
+            border-radius: 240px 150px 100px 150px; 
+            padding: 20px; 
+            text-align: center;  
+            background-color: rgba(255, 255, 255, 0.661); 
+            z-index: 1;
+        }
+
+        .gets .get-started{
+            position: relative;
+            justify-content: center;
+            color: rgb(14, 50, 82);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            max-width: 300px;
+            margin: 0 auto;
+            border: 2px solid transparent;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+            border-radius: 120px 120px 60px 60px;
+            padding:20px 20px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            z-index: 2;
+        }
+
+
+        .gets .get-started h2{
+            font-size: 3rem;
+            max-width: 600px;
+        }
+        .gets .get-started .btn{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background: rgba(127, 218, 17, 0.368);
+            box-shadow: 0 0 10px white;
+            cursor: pointer;
+            height: 55px;
+            outline: none;
+            border: none;
+            border-radius: 40px; 
+            }
+        .gets .btn a{
+            color: black;
+            text-decoration: none;
+            font-weight: 700;
+
+        }
+        
+        .gets .get-started h4{
+            font-weight: 300;
+            margin-top: 15px;
+            max-width: 600px;
+        }
+
+        .gets .box2{
+            background: url(Screenshot\ 2025-03-02\ 000756.jpg);
+            background-size: 500px;
+            background-position-x: 600px;
+            position: absolute; 
+            top: 15%; 
+            right: 32%; 
+            transform: translateX(40%); 
+            width: 500px; 
+            height:395px; 
+            border: 2px solid transparent; 
+            box-shadow: 0px 0px 10px rgb(0, 0, 0); 
+            border-radius:150px 300px 140px 150px; 
+            padding: 20px; 
+            text-align: center;  
+            background-color: rgba(255, 255, 255, 0.613); 
+            z-index: 1;
+        }
+
+        .gets .box2 .circle2{
+            border: 2px transparent;
+            box-shadow: 0 0 5px white;
+            background-size: 300px;
+            background-position-x: center;
+            background-image: linear-gradient(rgb(19, 19, 55),rgb(15, 88, 50),rgb(16, 138, 16),rgb(166, 255, 0),rgb(16, 138, 16),rgb(15, 88, 50),rgb(19, 19, 55));
+            position: absolute;
+            margin-bottom: 450px;
+            left: -30px;
+            top: 50px;
+            transform: translate(180%);
+            background-color: rgba(68, 104, 54);
+            width: 120px;
+            height: 120px;  
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+        .gets .box2 .circle3{
+            border: 2px transparent;
+            box-shadow: 0 0 5px white;
+            background-size: 300px;
+            background-position-x: center;
+            background-image: linear-gradient(rgb(19, 19, 55),rgb(15, 88, 50),rgb(16, 138, 16),rgb(166, 255, 0),rgb(16, 138, 16),rgb(15, 88, 50),rgb(19, 19, 55));
+            position: absolute;
+            margin-bottom: 450px;
+            left: 300px;
+            top: 90px;
+            transform: translate(180%);
+            background-color: rgba(68, 104, 54);
+            width: 80px;
+            height: 80px;  
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+        .gets .box2 .circle3 H3{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 0px 0px rgb(106, 254, 0);
+        }
+        
+
+        .gets .box2 .circle4{
+            border: 2px transparent;
+            box-shadow: 0 0 5px white;
+            background-size: 300px;
+            background-position-x: center;
+            background-image: radial-gradient(rgb(1, 23, 1),rgb(24, 201, 24) 80%);
+            position: absolute;
+            margin-bottom: 450px;
+            left: 200px;
+            top: -10px;
+            transform: translate(180%);
+            background-color: rgb(68, 104, 54);
+            width: 50px;
+            height: 50px;  
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+        .gets .box2 .circle4 h4{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 11px;
+            color: white;
+            text-shadow: 0px 0px 10px rgb(106, 254, 0);
+        }
+
+        .gets .box2 .circle2 h1{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 0px 10px rgb(0, 0, 0);
+        }
+
+        .circle1{
+            background: url(1687946240654.png);
+            background-size: 300px;
+            background-position-y: -140px;
+            background-position-x: -70px;
+            margin-bottom: 450px;
+            right: 0px;
+            box-shadow: 0 0 10px black;
+            transform: translate(-495%);
+            background-color: rgb(255, 255, 255);
+            width: 150px;
+            height: 150px;  
+            border-radius: 50%;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">Self-Care Synergy</a></div>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="gets">
+        <div class="box1">
+        </div>
+        <div class="get-started">
+            <h2>Self-Care <br>  Synergy</h2>
+            <h4>Your personal companion for self-care</h4>
+            <h3>A tool to help you achieve self-care </h3>
+            <button class="btn"><a href="https://www.youtube.com/results?search_query=how+to+create+homepage+using+html+and+css">Get Started</a></button>
+        </div>
+        <div class="box2">
+            <div class="circle2"><h1>SOUL CARE</h1></div>
+            <div class="circle3"><H3>SELF LOVE</H3></div>
+            <div class="circle4"><h4>BODY BLISS</h4></div>
+            <div class="circle5"></div>
+        </div>
+        <div class="circle1"></div>
+    </section>
+    <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        };
+    </script>
+</body>
+</html>
