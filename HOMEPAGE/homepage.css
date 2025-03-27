@@ -1,0 +1,472 @@
+body {
+    background: url(design2.png);
+    /*background: rgba(192, 190, 179, 0.671);*/
+    background-position: center;
+    background-size: auto;
+    height: 100vh;
+    margin: 0; 
+    padding: 0; 
+}
+* {
+    text-decoration: none;
+}
+.navbar {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    padding:15px;
+    position: sticky; 
+    top: 0;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: rgb(13, 9, 9);}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo a {
+    font-size: 35px;
+    color: rgb(42, 139, 119);
+    font-weight: 600;
+    margin-left: 150px;
+    padding:15px 15px;
+}
+.logo a:hover {
+    color: white;
+    border: 2px solid transparent;
+    padding: 15px 15px;
+}
+li {
+    list-style: none; 
+    display: inline-block;
+    width: 100px;
+}
+li a {
+    color: rgb(42, 139, 119);
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    padding: 5px 5px;
+}
+li a:hover {
+    color: white;
+    background-color: rgb(42, 139, 119);
+    border: 2px solid transparent;
+}
+li a:active{
+    color: white;
+    background-color: rgb(42, 139, 119);
+    border: 2px solid transparent;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    border: transparent;
+}
+
+.dropdown-content a {
+    background-color: transparent;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 0px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(42, 139, 119);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.gets{
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 97px;
+    margin-left: 150px;
+}
+
+.gets .box1{
+    background: url(box1.png);
+    background-position: center;
+    background-size: 500px;
+    position: absolute; 
+    top: 20%; 
+    left: 30%; 
+    transform: translateX(-50%); 
+    width: 370px; 
+    height:350px; 
+    border: 2px solid transparent; 
+    box-shadow: 0px 0px 10px rgb(0, 0, 0); 
+    border-radius: 240px 150px 100px 150px; 
+    padding: 20px; 
+    text-align: center;  
+    background-color: rgba(255, 255, 255, 0.661); 
+    z-index: 1;
+}
+
+.gets .get-started{
+    position: relative;
+    justify-content: center;
+    color: rgb(14, 50, 82);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 300px;
+    margin: 0 auto;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 120px 120px 60px 60px;
+    padding:20px 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+
+.gets .get-started h2{
+    font-size: 3rem;
+    max-width: 600px;
+}
+.gets .get-started .btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(127, 218, 17, 0.368);
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+    height: 55px;
+    outline: none;
+    border: none;
+    border-radius: 40px; 
+    }
+.gets a{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.gets .get-started h4{
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+.gets .box2{
+    background: url(box2.jpg);
+    background-size: 600px;
+    background-position-x: 600px;
+    position: absolute; 
+    top: 15%; 
+    right: 32%; 
+    transform: translateX(40%); 
+    width: 500px; 
+    height:395px; 
+    border: 2px solid transparent; 
+    box-shadow: 0px 0px 10px rgb(0, 0, 0); 
+    border-radius:150px 300px 140px 150px; 
+    padding: 20px; 
+    text-align: center;  
+    background-color: rgba(255, 255, 255, 0.613); 
+    z-index: 1;
+}
+
+.gets .box2 .circle2{
+    border: 2px transparent;
+    box-shadow: 0 0 5px white;
+    background-size: 300px;
+    background-position-x: center;
+    background-image: linear-gradient(rgb(19, 19, 55),rgb(15, 88, 50),rgb(16, 138, 16),rgb(166, 255, 0),rgb(16, 138, 16),rgb(15, 88, 50),rgb(19, 19, 55));
+    position: absolute;
+    margin-bottom: 450px;
+    left: -30px;
+    top: 50px;
+    transform: translate(180%);
+    background-color: rgba(68, 104, 54);
+    width: 120px;
+    height: 120px;  
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.gets .box2 .circle3{
+    border: 2px transparent;
+    box-shadow: 0 0 5px white;
+    background-size: 300px;
+    background-position-x: center;
+    background-image: linear-gradient(rgb(19, 19, 55),rgb(15, 88, 50),rgb(16, 138, 16),rgb(166, 255, 0),rgb(16, 138, 16),rgb(15, 88, 50),rgb(19, 19, 55));
+    position: absolute;
+    margin-bottom: 450px;
+    left: 300px;
+    top: 90px;
+    transform: translate(180%);
+    background-color: rgba(68, 104, 54);
+    width: 80px;
+    height: 80px;  
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.gets .box2 .circle3 H3{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 0px rgb(106, 254, 0);
+}
+
+
+.gets .box2 .circle4{
+    border: 2px transparent;
+    box-shadow: 0 0 5px white;
+    background-size: 300px;
+    background-position-x: center;
+    background-image: radial-gradient(rgb(1, 23, 1),rgb(24, 201, 24) 80%);
+    position: absolute;
+    margin-bottom: 450px;
+    left: 200px;
+    top: -10px;
+    transform: translate(180%);
+    background-color: rgb(68, 104, 54);
+    width: 50px;
+    height: 50px;  
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.gets .box2 .circle4 h4{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(106, 254, 0);
+}
+
+.gets .box2 .circle2 h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.circle1{
+    background: url(circle1.png);
+    background-size: 300px;
+    background-position-y: -140px;
+    background-position-x: -70px;
+    margin-bottom: 450px;
+    right: 0px;
+    box-shadow: 0 0 10px black;
+    transform: translate(-495%);
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;  
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.menuboxes{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 370px;
+    margin-right: 400px;
+}
+
+.menuboxes .menu1{
+    cursor: pointer;
+    padding: 10px;
+    margin: 30px;
+    width: 790px;
+    height: 170px;
+    background-color: rgb(220, 184, 216);
+    background-image: linear-gradient(rgb(241, 162, 175),rgb(237, 172, 182),rgb(244, 235, 244));
+    border: 0px solid transparent;
+    text-align: center;
+    border-radius:20px;
+    box-shadow: 0px 0px 10px 0px black;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.menuboxes .menu2{
+    cursor: pointer;
+    padding: 10px;
+    margin: 30px;
+    width: 790px;
+    height: 170px;
+    background-color: rgb(38, 143, 144);
+    background-image: linear-gradient(rgba(14, 26, 33, 0.551),rgb(35, 98, 108),rgb(173, 189, 193));
+    border: 0px solid transparent;
+    text-align: center;
+    border-radius:20px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.menuboxes .menu1 h2{
+    margin-top: 120px;
+    text-align: center;
+    box-shadow: 0px 0px 10px transparent;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    }
+
+.menuboxes .menu2 h2{
+    margin-top: 120px;
+    text-align: center;
+    box-shadow: 0px 0px 10px transparent;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    }
+
+.menuboxes .menu2 .circle6{
+    background: url(health\ insights.png);
+    border: 2px transparent;
+    box-shadow: 0 0 5px rgb(23, 79, 97);
+    background-size: 100px;
+    background-position-x: center;
+    position: absolute;
+    margin-bottom: 0px;
+    left: 690px;
+    top: 650px;
+    transform: translate(180%);
+    background-color: rgb(61, 166, 201);
+    width: 90px;
+    height: 90px;  
+    border-radius: 50%;
+    z-index: 3;
+    }
+.menuboxes .menu2 .circle8{
+    background: url(daily\ scheduling.webp);
+    border: 2px transparent;
+    box-shadow: 0 0 5px rgb(23, 79, 97);
+    background-size: 100px;
+    background-position-x: -5px;
+    background-position-y: -5px ;
+    position: absolute;
+    margin-bottom: 0px;
+    left: 480px;
+    top: 650px;
+    transform: translate(180%);
+    background-color: rgb(61, 166, 201);
+    width: 90px;
+    height: 90px;  
+    border-radius: 50%;
+    z-index: 3;
+    }
+.menuboxes .menu1 .circle9{
+    background: url(caregiver\ symbol.avif);
+    border: 2px transparent;
+    box-shadow: 0 0 5px rgb(23, 79, 97);
+    background-size: 100px;
+    background-position-x: center;
+    position: absolute;
+    margin-bottom: 0px;
+    left: 899px;
+    top: 650px;
+    transform: translate(180%);
+    background-color: rgb(44, 162, 201);
+    width: 90px;
+    height: 90px;  
+    border-radius: 50%;
+    z-index: 3;
+    }  
+.menuboxes .menu1 .circle7{
+    background: url(community\ support.webp);
+    border: 2px transparent;
+    box-shadow: 0 0 5px rgb(23, 79, 97);
+    background-size: 100px;
+    background-position-x: center;
+    position: absolute;
+    margin-bottom: 0px;
+    left: 270px;
+    top: 650px;
+    transform: translate(180%);
+    background-color: rgb(61, 166, 201);
+    width: 90px;
+    height: 90px;  
+    border-radius: 50%;
+    z-index: 3;
+    }
+
+/*@media (max-width: 768px) {
+        .navdiv {
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+    
+        .logo a {
+            margin-left: 0;  Remove left margin 
+        }
+    
+        .gets {
+            flex-direction: column; 
+            margin-left: 0;
+            margin-top: 280px; 
+        }
+
+        .gets .box1, .gets .box2{
+            display: none;
+        }
+        .circle1{
+            flex-direction: column;
+            margin-left: 1000px;
+        } 
+
+        .menuboxes {
+            flex-direction: column; 
+            margin-left: 0; 
+            margin-right: 0; 
+        }
+    
+        .menuboxes .menu1, .menuboxes .menu2 {
+            width: 90%; 
+            height: auto;
+        }
+
+        .menuboxes .menu1 .circle9, .menuboxes .menu1 .circle7, .menuboxes .menu2 .circle6, .menuboxes .menu2 .circle8{
+            flex-direction: column;
+            margin-right: 0;
+        }
+    }
+    
+ @media (max-width: 480px) {
+        .navbar {
+            padding: 10px;
+        }
+    
+        .logo a {
+            font-size: 28px; 
+        }
+    
+        .gets .get-started h2 {
+            font-size: 2rem; 
+        }
+    
+        .gets .get-started h4 {
+            font-size: 1rem; 
+        }
+    }*/
