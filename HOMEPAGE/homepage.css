@@ -2,7 +2,7 @@ body {
     background: url(design2.png);
     /*background: rgba(192, 190, 179, 0.671);*/
     background-position: center;
-    background-size: auto;
+    
     height: 100vh;
     margin: 0; 
     padding: 0; 
@@ -412,14 +412,14 @@ li a:active{
     z-index: 3;
     }
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
         .navdiv {
             flex-direction: column; 
             align-items: flex-start; 
         }
     
         .logo a {
-            margin-left: 0;  Remove left margin 
+            margin-left: 0;
         }
     
         .gets {
@@ -431,9 +431,9 @@ li a:active{
         .gets .box1, .gets .box2{
             display: none;
         }
+        
         .circle1{
             flex-direction: column;
-            margin-left: 1000px;
         } 
 
         .menuboxes {
@@ -448,12 +448,12 @@ li a:active{
         }
 
         .menuboxes .menu1 .circle9, .menuboxes .menu1 .circle7, .menuboxes .menu2 .circle6, .menuboxes .menu2 .circle8{
-            flex-direction: column;
-            margin-right: 0;
-        }
+            display: none;
+            }
     }
     
  @media (max-width: 480px) {
+        
         .navbar {
             padding: 10px;
         }
@@ -469,4 +469,4 @@ li a:active{
         .gets .get-started h4 {
             font-size: 1rem; 
         }
-    }*/
+    }
