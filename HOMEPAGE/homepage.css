@@ -1,5 +1,4 @@
 body {
-    overflow: hidden;
     height: 100vh;
     margin: 0; 
     padding: 0; 
@@ -20,6 +19,7 @@ body {
 
 * {
     text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
 }
 .navbar {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
@@ -363,7 +363,7 @@ li a:active{
     background-position-x: center;
     position: absolute;
     margin-bottom: 0px;
-    left: 700px;
+    left: 691px;
     top: 650px;
     transform: translate(180%);
     background-color: rgb(61, 166, 201);
@@ -381,7 +381,7 @@ li a:active{
     background-position-y: -5px ;
     position: absolute;
     margin-bottom: 0px;
-    left: 485px;
+    left: 480px;
     top: 650px;
     transform: translate(180%);
     background-color: rgb(61, 166, 201);
@@ -398,7 +398,7 @@ li a:active{
     background-position-x: center;
     position: absolute;
     margin-bottom: 0px;
-    left: 915px;
+    left: 903px;
     top: 650px;
     transform: translate(180%);
     background-color: rgb(44, 162, 201);

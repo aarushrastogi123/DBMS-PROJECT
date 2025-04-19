@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     list-style: none;
 }
@@ -14,19 +14,48 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /*background: radial-gradient(#d2d9d3, #057d37);*/
-    background: url(design2.png);
+}
+
+.title1 .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title1 .title h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 650px;
+    margin-left: 50px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 0;
+    height: 0;
+    z-index: -1; /* Place the video behind other content */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Cover the entire viewport */
 }
 
 .container{
-    position: relative;
+    position: absolute;
     width: 850px;
     height: 550px;
-    background: #d1ddd6;
+    background: rgba(209, 221, 214, 0.265);
     margin: 20px;
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .2);
     overflow: hidden;
+    text-shadow: 0 0 10px white;
 }
 
     .container h1{
@@ -42,24 +71,40 @@ body{
 form{ width: 100%; }
 
 .form-box{
+    pointer-events: none;
+    font-family: 'Times New Roman', Times, serif;
     position: absolute;
     right: 0;
     width: 50%;
     height: 100%;
-    background: #d1ddd6;
+    background: rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
-    color: #333;
+    color: #030303;
     text-align: center;
     padding: 40px;
     z-index: 1;
-    transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+    transition: opacity .6s ease-in-out;
+    text-shadow:0 0 10px white;
 }
 
-    .container.active .form-box{ right: 50%; }
+.container.active .form-box{ right: 50%; }
+.form-box.login {
+    opacity: 1;
+    pointer-events: auto;
+}
 
-    .form-box.register{ visibility: hidden; }
-        .container.active .form-box.register{ visibility: visible; }
+.form-box.register{opacity: 0;
+    pointer-events: none;
+}
+
+.container.active .form-box.login {
+    opacity: 0;
+    pointer-events: none;
+}
+.container.active .form-box.register{  
+        opacity: 1;
+        pointer-events: auto; }
 
 .input-box{
     position: relative;
@@ -67,9 +112,10 @@ form{ width: 100%; }
 }
 
     .input-box input{
+        font-family: 'Times New Roman', Times, serif;
         width: 100%;
         padding: 13px 50px 13px 20px;
-        background: #eee;
+        background: #ffffff;
         border-radius: 8px;
         border: none;
         outline: none;
@@ -94,20 +140,21 @@ form{ width: 100%; }
 .forgot-link{ margin: -15px 0 15px; }
     .forgot-link a{
         font-size: 14.5px;
-        color: #333;
+        color: #000000;
     }
 
 .btn{
     width: 100%;
     height: 48px;
-    background: #478778;
+    background: #17302b;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: #fff;
+    color: #ffffff;
     font-weight: 600;
+    text-shadow: 0 0 5px white;
 }
 
 .social-icons{
@@ -118,11 +165,12 @@ form{ width: 100%; }
     .social-icons a{
         display: inline-flex;
         padding: 10px;
-        border: 2px solid #478778;
+        border: 2px solid #17302bf7;
         border-radius: 8px;
         font-size: 24px;
-        color: #333;
+        color: #f3f3f3;
         margin: 0 8px;
+        text-shadow: 0 0 5px white;
     }
 
 .toggle-box{
@@ -131,27 +179,26 @@ form{ width: 100%; }
     height: 100%;
 }
 
-    .toggle-box::before{
+.toggle-box::before{
         content: '';
         position: absolute;
         left: -250%;
         width: 300%;
         height: 100%;
-        background: #478778;
-        /* border: 2px solid red; */
+        background: #17302b; 
         border-radius: 150px;
         z-index: 2;
         transition: 1.8s ease-in-out;
     }
 
-        .container.active .toggle-box::before{ left: 50%; }
+.container.active .toggle-box::before{ left: 50%; }
 
 .toggle-panel{
     position: absolute;
     width: 50%;
     height: 100%;
-    /* background: seagreen; */
-    color: #fff;
+    
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;

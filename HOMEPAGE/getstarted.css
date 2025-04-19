@@ -1,0 +1,191 @@
+body {
+    height: 100vh;
+    margin: 0; 
+    padding: 0; 
+}
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 0;
+    height: 0;
+    z-index: -1; /* Place the video behind other content */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Cover the entire viewport */
+}
+
+
+* {
+    text-decoration: none;
+}
+.navbar {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    padding:15px;
+    position: sticky; 
+    top: 0;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: rgb(13, 9, 9);}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo a {
+    font-size: 35px;
+    color: rgb(42, 139, 119);
+    font-weight: 600;
+    margin-left: 150px;
+    padding:15px 15px;
+}
+.logo a:hover {
+    color: white;
+    border: 2px solid transparent;
+    padding: 15px 15px;
+}
+li {
+    list-style: none; 
+    display: inline-block;
+    width: 100px;
+}
+li a {
+    color: rgb(42, 139, 119);
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    padding: 5px 5px;
+}
+li a:hover {
+    color: white;
+    background-color: rgb(42, 139, 119);
+    border: 2px solid transparent;
+}
+li a:active{
+    color: white;
+    background-color: rgb(42, 139, 119);
+    border: 2px solid transparent;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    border: transparent;
+}
+
+.dropdown-content a {
+    background-color: transparent;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 0px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(42, 139, 119);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.Form{
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: calc(100vh - 70px);
+}
+.user {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    height: auto;
+  }
+
+  .user form h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 40px;
+    font-stretch:wider;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.592);
+    color: white;
+  }
+  
+  .user form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0 0 10px white;
+  }
+  .user form input,
+  .user form select {
+    width: 500px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-shadow: 0 0 10px #333;   
+  }
+
+  .user form select{
+    width:520px;
+  }
+  .user form input:focus,
+  .user form select:focus {
+    border: 2px solid #66ccff;
+    background-color: #fff;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    width: 300px;
+    padding: 12px;
+    border: none;
+    box-shadow: 0 0 10px white;
+    border-radius: 20px;
+    background-color: rgb(197, 244, 139);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 600;
+    margin-left: 100px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: rgb(197, 244, 139);
+  }
+  .user form i{
+    margin-top: 5px;
+    font-size: 40px; 
+    color: white; 
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    text-shadow: 0 0 10px white;
+  }
+
