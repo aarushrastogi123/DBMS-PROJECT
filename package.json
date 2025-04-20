@@ -1,0 +1,27 @@
+{
+  "name": "dbms-project",
+  "version": "1.0.0",
+  "description": "DBMSS PROJECT\r BY- Aarush Rastogi, Ipshita Singh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarushrastogi123/DBMS-PROJECT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aarushrastogi123/DBMS-PROJECT/issues"
+  },
+  "homepage": "https://github.com/aarushrastogi123/DBMS-PROJECT#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.13.1"
+  }
+}
