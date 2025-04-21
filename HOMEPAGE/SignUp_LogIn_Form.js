@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (storedUser && storedUser.username === username && storedUser.password === password) {
       alert("Login successful!");
-      window.location.href = "homepage.html";
+      window.location.href = "2 homepage.html";
     } else {
       alert("Invalid credentials. Please try again.");
     }
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (storedUser && storedUser.username === username && storedUser.password === password) {
         sessionStorage.setItem("loggedInUser", storedUser.username);
           alert("Login successful!");
-          window.location.href = "homepage.html";}
+          window.location.href = "2 homepage.html";}
   });
 });
 // GOOGLE login
@@ -61,7 +61,7 @@ document.querySelector(".bxl-google").addEventListener("click", () => {
   firebase.auth().signInWithPopup(provider)
     .then(result => {
       sessionStorage.setItem("loggedInUser", result.user.displayName);
-      window.location.href = "homepage.html";
+      window.location.href = "2 homepage.html";
     })
     .catch(err => alert("Google login failed: " + err.message));
 });
@@ -72,7 +72,7 @@ document.querySelector(".bxl-github").addEventListener("click", () => {
   firebase.auth().signInWithPopup(provider)
     .then(result => {
       sessionStorage.setItem("loggedInUser", result.user.displayName);
-      window.location.href = "homepage.html";
+      window.location.href = "2 homepage.html";
     })
     .catch(err => alert("GitHub login failed: " + err.message));
 });
@@ -83,7 +83,7 @@ document.querySelector(".bxl-facebook").addEventListener("click", () => {
   firebase.auth().signInWithPopup(provider)
     .then(result => {
       sessionStorage.setItem("loggedInUser", result.user.displayName);
-      window.location.href = "homepage.html";
+      window.location.href = "2 homepage.html";
     })
     .catch(err => alert("Facebook login failed: " + err.message));
 });
