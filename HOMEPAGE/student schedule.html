@@ -84,6 +84,11 @@
                 navbar.classList.remove("scrolled");
             }
         };
+            document.querySelector("form").addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent actual form submission for demo
+            // You can do any validation or data handling here if needed
+            window.location.href = "goals.html"; // Redirect to Goals page
+        });
     </script>
 </body>
 </html>
