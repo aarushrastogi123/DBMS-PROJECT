@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adult Goals</title>
+    <title>Exercise</title>
     <link rel="stylesheet" href="commonfile.css">
     <link rel="stylesheet" href="schedule.css">
+    <style>
+        .user form textarea{
+            width: 690px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            text-shadow: 0 0 10px #333;   
+        }
+    </style>
 </head>
 <body>
     <video autoplay muted loop class="video-background">
@@ -27,9 +40,10 @@
                 <li><a href="features.html">Features</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="dropdown"><a href="profile.html" class="dropbtn">Profile</a>
-                <div class="dropdown-content">
-                    <a href="SignUp_LogIn_Form.html">Log out</a>
-                </div></li>
+                    <div class="dropdown-content">
+                        <a href="SignUp_LogIn_Form.html">Log out</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -37,32 +51,37 @@
         <div class="user">
             <form action="/submit" method="POST">
                 <div>
-                    <h1>Adult Goals</h1>
+                    <h1>Exercise</h1>
                 </div>
                 <div>
-                    <label for="Goal Description">Goal Description:</label>
-                    <input type="text" id="Goal Description" name="Goal Description">
+                    <label for="exerciseType">Type of Exercise:</label>
+                    <input type="text" id="exerciseType" name="exerciseType" required>
                 </div>
                 <div>
-                    <label for="Status">Status:</label>
-                    <select id="Status" name="Status" required>
-                        <option value="">--Select Status--</option>
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
-                        <option value="nonbinary">Non-binary</option>
+                    <label for="duration">Duration:</label>
+                    <select id="duration" name="duration" required>
+                        <option value="">--Select Duration--</option>
+                        <option value="15">15 minutes</option>
+                        <option value="30">30 minutes</option>
+                        <option value="45">45 minutes</option>
+                        <option value="60">60 minutes</option>
                     </select>
                 </div>
                 <div>
-                    <label for="date">Start Date:</label>
-                    <input type="date" id="date" name="date" >
+                    <label for="frequency">Frequency:</label>
+                    <select id="frequency" name="frequency" required>
+                        <option value="">--Select Frequency--</option>
+                        <option value="daily">Daily</option>
+                        <option value="3perweek">3 times/week</option>
+                        <option value="weekly">Weekly</option>
+                    </select>
                 </div>
                 <div>
-                    <label for="date">End Date:</label>
-                    <input type="date" id="date" name="date" >
+                    <label for="notes">Additional Notes:</label>
+                    <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Any thoughts, preferences, or reminders..."></textarea>
                 </div>
-                
-                <button type="submit">Submit</a></button>
-              </form>
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </section>
     <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>

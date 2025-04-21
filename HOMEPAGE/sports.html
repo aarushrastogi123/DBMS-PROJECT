@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrition</title>
+    <title>Sports</title>
     <link rel="stylesheet" href="commonfile.css">
     <link rel="stylesheet" href="schedule.css">
 </head>
@@ -34,31 +34,48 @@
             </ul>
         </div>
     </nav>
+
     <section class="Form">
         <div class="user">
             <form action="/submit" method="POST">
                 <div>
-                    <h1>Nutrition</h1>
+                    <h1>Sports</h1>
                 </div>
                 <div>
-                    <label for="mealFrequency">Meal Frequency:</label>
-                    <select id="mealFrequency" name="mealFrequency" required>
-                        <option value="">--Select Frequency--</option>
-                        <option value="1">1 meal/day</option>
-                        <option value="2">2 meals/day</option>
-                        <option value="3">3 meals/day</option>
-                        <option value="more">More than 3 meals/day</option>
+                    <label for="sportType">Sport Type:</label>
+                    <input type="text" id="sportType" name="sportType" placeholder="e.g., Football, Tennis" required>
+                </div>
+                <div>
+                    <label for="duration">Duration:</label>
+                    <select id="duration" name="duration" required>
+                        <option value="">--Select Duration--</option>
+                        <option value="30min">30 minutes</option>
+                        <option value="1hr">1 hour</option>
+                        <option value="2hr">2 hours</option>
+                        <option value="more">More than 2 hours</option>
                     </select>
                 </div>
-                <div class="notes">
+                <div>
+                    <label for="frequency">Frequency:</label>
+                    <select id="frequency" name="frequency" required>
+                        <option value="">--Select Frequency--</option>
+                        <option value="daily">Daily</option>
+                        <option value="3xweek">3 times a week</option>
+                        <option value="weekend">Weekends only</option>
+                        <option value="occasionally">Occasionally</option>
+                    </select>
+                </div>
+                <div>
                     <label for="notes">Notes:</label>
-                    <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Any additional details..."></textarea>
+                    <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Add any additional info..."></textarea>
                 </div>
                 <button type="submit">Submit</button>
             </form>
         </div>
     </section>
+
     <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>
+
     <script>
         window.onscroll = function() {
             var navbar = document.getElementById("navbar");
