@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Health</title>
+    <link rel="stylesheet" href="commonfile.css">
+    <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="Untitled design1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav class="navbar" id="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="homepage.html">Self-Care Synergy</a></div>
+            <ul>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About</a>
+                    <div class="dropdown-content">
+                        <a href="mission.html">Our Mission</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="testimonials.html">Testimonials</a>
+                    </div>
+                </li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown"><a href="profile.html" class="dropbtn">Profile</a>
+                    <div class="dropdown-content">
+                        <a href="SignUp_LogIn_Form.html">Log out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="Form">
+        <div class="user">
+            <form action="/submit" method="POST">
+                <div>
+                    <h1>Physical Health</h1>
+                </div>
+                <div>
+                    <label for="healthGoal">Select Your Health Goal:</label>
+                    <select id="healthGoal" name="healthGoal" required>
+                        <option value="">--Choose an option--</option>
+                        <option value="nutrition">Nutrition</option>
+                        <option value="exercise">Exercise</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        };
+    </script>
+</body>
+</html>
