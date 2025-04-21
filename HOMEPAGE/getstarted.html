@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Started</title>
     <link rel="stylesheet" href="getstarted.css">
+    <link rel="stylesheet" href="commonfile.css">
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -63,9 +64,7 @@
                     <select id="role" name="role" required>
                         <option value="">--Select Role--</option>
                         <option value="Student">Student</option>
-                        <option value="Employee">Employee</option>
-                        <option value="Doctor">Doctor</option>
-                        <option value="other">Other</option>
+                        <option value="Adult">Adult</option>
                     </select>
                 </div>
                 <div>
@@ -88,6 +87,7 @@
     </section>
     <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>
     <script>
+        // Scroll navbar styling
         window.onscroll = function() {
             var navbar = document.getElementById("navbar");
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
@@ -96,6 +96,20 @@
                 navbar.classList.remove("scrolled");
             }
         };
+        document.getElementById("userForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+    
+            const role = document.getElementById("role").value;
+    
+            if (role === "Student") {
+                window.location.href = "student schedule.html";
+            } else if (role === "Adult") {
+                window.location.href = "adult schedule.html";
+            } else {
+                alert("Please select a role.");
+            }
+        });
     </script>
+    
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Schedule</title>
     <link rel="stylesheet" href="student schedule.css">
+    <link rel="stylesheet" href="commonfile.css">
 </head>
 <body>
     <video autoplay muted loop class="video-background">
@@ -32,6 +33,57 @@
             </ul>
         </div>
     </nav>
+    <section class="Form">
+        <div class="user">
+            <form action="/submit" method="POST">
+                <div>
+                    <h1>Student Schedule</h1>
 
+                </div>
+                <div class="label1">
+                    <label for="CLass Hours"><p>Class Hours:</p></label>
+                    <input type="time" id="fromhours" name="=fromhours" required>
+                    <label for="Tohours"><p>To:</p></label>
+                    <input type="time" id="tohours" name="tohours"  required>
+                </div>
+                <div>
+                    <label for="dates">Assignment Due Date:</label>
+                    <input type="date" id="dates" name="dates" required min="0" max="100">
+                </div>\
+                <div>
+                    <label for="Priority">Priority:</label>
+                    <input type="text" id="Priority" name="Priority">
+                </div>
+                <div class="label1">
+                    <label for="CLass Hours"><p>Break Hours:</p></label>
+                    <input type="time" id="fromhours" name="=fromhours" required>
+                    <label for="Tohours"><p>To:</p></label>
+                    <input type="time" id="tohours" name="tohours"  required>
+                </div>
+                <div class="label2">
+                    <label for="Study Hours"><p>Study Hours:</p></label>
+                    <input type="time" id="fromhours." name="=fromhours." required>
+                    <label for="Tohours:"><p>To:</p></label>
+                    <input type="time" id="tohours." name="tohours."  required>
+                </div>
+                <div>
+                    <label for="role">Extra Cirricular Activities:</label>
+                    <input type="text" id="otherActivity" name="otherActivity" placeholder="Type your activity">
+                </div>
+                <button type="submit">Submit <a href="student schedule.html"></a></button>
+              </form>
+        </div>
+    </section>
+    <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        };
+    </script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     padding: 30px;
     border-radius: 15px;
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     height: auto;
   }
@@ -27,7 +27,7 @@
   .user form label {
     display: block;
     margin-bottom: 5px;
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 16px;
     color: white;
     text-shadow: 0 0 10px white;
@@ -35,7 +35,7 @@
   
   .user form input,
   .user form select {
-    width: 500px;
+    width: 690px;
     padding: 10px;
     border-radius: 20px;
     border: none;
@@ -47,7 +47,8 @@
 }
 
   .user form select{
-    width:520px;
+    width:710px;
+    margin-top: 5px;
 }
 
   .user form input:focus,
@@ -57,7 +58,7 @@
 }
   
   button[type="submit"] {
-    margin-top: 20px;
+    margin-top:30px;
     width: 300px;
     padding: 12px;
     border: none;
@@ -69,7 +70,7 @@
     cursor: pointer;
     transition: background 0.3s ease;
     font-weight: 600;
-    margin-left: 100px;
+    margin-left: 200px;
 }
   
   button[type="submit"]:hover {
@@ -84,4 +85,3 @@
     text-align: center; 
     text-shadow: 0 0 10px white;
 }
-

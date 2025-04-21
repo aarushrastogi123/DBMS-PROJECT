@@ -1,5 +1,4 @@
 body {
-    overflow: hidden;
     height: 100vh;
     margin: 0; 
     padding: 0; 
@@ -12,19 +11,19 @@ body {
     min-height: 100%;
     width: 0;
     height: 0;
-    z-index: -1;
+    z-index: -1; 
     transform: translate(-50%, -50%);
     object-fit: cover; 
 }
 
+
 * {
     text-decoration: none;
-    box-sizing: border-box; 
+    font-family: 'Times New Roman', Times, serif;
 }
-
 .navbar {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    padding: 15px;
+    padding:15px;
     position: sticky; 
     top: 0;
     transition: background-color 0.3s ease;
@@ -32,8 +31,7 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgb(13, 9, 9);
-}
+    background-color: rgb(13, 9, 9);}
 
 .navdiv {
     display: flex;
@@ -41,27 +39,23 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .logo a {
     font-size: 35px;
     color: rgb(42, 139, 119);
     font-weight: 600;
     margin-left: 150px;
-    padding: 15px 15px;
+    padding:15px 15px;
 }
-
 .logo a:hover {
     color: white;
     border: 2px solid transparent;
     padding: 15px 15px;
 }
-
 li {
     list-style: none; 
     display: inline-block;
     width: 100px;
 }
-
 li a {
     color: rgb(42, 139, 119);
     font-size: 15px;
@@ -70,19 +64,17 @@ li a {
     border: 2px solid transparent;
     border-radius: 100px;
     padding: 5px 5px;
-    transition: background-color 0.3s, color 0.3s; 
 }
-
 li a:hover {
     color: white;
     background-color: rgb(42, 139, 119);
+    border: 2px solid transparent;
 }
-
-li a:active {
+li a:active{
     color: white;
     background-color: rgb(42, 139, 119);
+    border: 2px solid transparent;
 }
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -91,8 +83,8 @@ li a:active {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0);
-    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 3;
     border: transparent;
 }
@@ -113,56 +105,3 @@ li a:active {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-.schedule{
-    display: flex;
-}
-.schedule .student, .schedule .adult{
-    background-position: center;
-    background-size: 350px;
-    position: absolute;
-    top: 20%; 
-    left: 35%; 
-    transform: translateX(-50%); 
-    width: 370px; 
-    height:350px; 
-    border: 2px solid transparent; 
-    box-shadow: 0px 0px 10px rgb(0, 0, 0); 
-    border-radius: 0px; 
-    padding: 20px; 
-    text-align: center;  
-    background-color: rgba(255, 255, 255, 0.628); 
-    z-index: 1;
-
-}
-.schedule .adult{ 
-    left: 65%; 
-    
-}
-.schedule .student .btn,.schedule .adult .btn{
-    display: flex;
-    margin-top:250px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background: rgb(197, 244, 139);
-    box-shadow: 0 0 10px white;
-    cursor: pointer;
-    height: 55px;
-    outline: none;
-    border: none;
-    border-radius: 40px;
-    z-index: 5;
-}
-
-
-.schedule .student .btn a,.schedule .adult .btn a{
-    color: black;
-    text-decoration: none;
-    font-weight: 700;
-
-}
-
-
-
-

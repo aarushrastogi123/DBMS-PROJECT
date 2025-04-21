@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Schedule</title>
+    <link rel="stylesheet" href="adult schedule.css">
+    <link rel="stylesheet" href="commonfile.css">
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="Untitled design1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav class="navbar" id="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="homepage.html">Self-Care Synergy</a></div>
+            <ul>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About</a>
+                    <div class="dropdown-content">
+                        <a href="mission.html">Our Mission</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="testimonials.html">Testimonials</a>
+                    </div>
+                </li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown"><a href="profile.html" class="dropbtn">Profile</a>
+                <div class="dropdown-content">
+                    <a href="SignUp_LogIn_Form.html">Log out</a>
+                </div></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="Form">
+        <div class="user">
+            <form action="/submit" method="POST">
+                <div>
+                    <h1>Adult Schedule</h1>
+                </div>
+                <div class="label1">
+                    <label for="Work Hours"><p>Work Hours:</p></label>
+                    <input type="time" id="fromhours" name="=fromhours" required>
+                    <label for="Tohours"><p>To:</p></label>
+                    <input type="time" id="tohours" name="tohours"  required>
+                </div>
+                <div>
+                    <label for="Priority">Priority:</label>
+                    <input type="text" id="Priority" name="Priority">
+                </div>
+                <div class="label1">
+                    <label for="break Hours"><p>Family Hours:</p></label>
+                    <input type="time" id="fromhours" name="=fromhours" required>
+                    <label for="Tohours"><p>To:</p></label>
+                    <input type="time" id="tohours" name="tohours"  required>
+                </div>  e
+                <div>
+                    <label for="role">Personal Development Activities:</label>
+                    <input type="text" id="otherActivity" name="otherActivity" placeholder="Type your activity">
+                </div>
+                
+                <button type="submit">Submit <a href="student schedule.html"></a></button>
+              </form>
+        </div>
+    </section>
+    <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        };
+    </script>
+</body>
+</html>

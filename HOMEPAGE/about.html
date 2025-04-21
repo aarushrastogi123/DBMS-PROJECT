@@ -4,76 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <style>
-        body {
-            background: url(design2.png);
-            /*background: rgba(192, 190, 179, 0.671);*/
-            background-position: center;
-            background-size: 1900px 1080px;
-            height: 100vh;
-            margin: 0; 
-            padding: 0; 
-        }
-        .about h1{
-            
-        }
-        *{
-            text-decoration: none;
-        }
-        .navbar {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-            padding:15px;
-            position: sticky; 
-            top: 0;
-            transition: background-color 0.3s ease;
-            z-index: 1000;
-        }
-
-        .navbar.scrolled {
-            background-color: rgb(13, 9, 9);}
-
-        .navdiv {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo a {
-            font-size: 35px;
-            color: rgb(42, 139, 119);
-            font-weight: 600;
-            margin-left: 150px;
-            padding:15px 15px;
-        }
-        .logo a:hover {
-            color: white;
-            border: 2px solid transparent;
-            padding: 15px 15px;
-        }
-        li {
-            list-style: none; 
-            display: inline-block;
-            width: 100px;
-        }
-        li a {
-            color: rgb(42, 139, 119);
-            font-size: 15px;
-            font-weight: bold;
-            margin-right: 10px;
-            border: 2px solid transparent;
-            border-radius: 100px;
-            padding: 5px 5px;
-        }
-        li a:hover {
-            color: white;
-            background-color: rgb(42, 139, 119);
-            border: 2px solid rgb(42, 139, 119);
-        }
-        li a:active{
-            color: white;
-            background-color: rgb(42, 139, 119);
-            border: 2px solid rgb(42, 139, 119);
-        }
-    </style>
+    <link rel="stylesheet" href="commonfile.css">
 </head>
 <body>
     <nav class="navbar" id="navbar">
