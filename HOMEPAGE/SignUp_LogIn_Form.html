@@ -90,17 +90,23 @@
       </div>
     </div>
     <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyCPhgzWH8suYABK2KdDxRY20lzTF1UtDTY",
-        authDomain: "self-care-synergy.firebaseapp.com",
-        projectId: "self-care-synergy",
-        storageBucket: "self-care-synergy.firebasestorage.app",
-        messagingSenderId: "403447061002",
-        appId: "1:403447061002:web:48a14fb50989a3ab531df3",
-        measurementId: "G-60TDSQ1W0C"
-      };
-    
-      firebase.initializeApp(firebaseConfig);
+      // Assuming user successfully registers
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          const db = firebase.firestore();
+
+          // Save extra user info
+          return db.collection("users").doc(user.uid).set({
+            username: username,
+            email: email,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            }
+          );
+        })
+        .catch((error) => {
+          console.error("Registration error:", error.message);
+        });  
     </script>
   </body>
 </html>
