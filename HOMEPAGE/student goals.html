@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adult Schedule</title>
-    <link rel="stylesheet" href="schedule.css">
+    <title>Adult Goals</title>
     <link rel="stylesheet" href="commonfile.css">
+    <link rel="stylesheet" href="schedule.css">
 </head>
 <body>
     <video autoplay muted loop class="video-background">
@@ -37,30 +37,31 @@
         <div class="user">
             <form action="/submit" method="POST">
                 <div>
-                    <h1>Adult Schedule</h1>
-                </div>
-                <div class="label1">
-                    <label for="Work Hours"><p>Work Hours:</p></label>
-                    <input type="time" id="fromhours" name="=fromhours" required>
-                    <label for="Tohours"><p>To:</p></label>
-                    <input type="time" id="tohours" name="tohours"  required>
+                    <h1>Student Goals</h1>
                 </div>
                 <div>
-                    <label for="Priority">Priority:</label>
-                    <input type="text" id="Priority" name="Priority">
+                    <label for="Goal Description">Goal Description:</label>
+                    <input type="text" id="Goal Description" name="Goal Description">
                 </div>
-                <div class="label1">
-                    <label for="break Hours"><p>Family Hours:</p></label>
-                    <input type="time" id="fromhours" name="=fromhours" required>
-                    <label for="Tohours"><p>To:</p></label>
-                    <input type="time" id="tohours" name="tohours"  required>
-                </div>  e
                 <div>
-                    <label for="role">Personal Development Activities:</label>
-                    <input type="text" id="otherActivity" name="otherActivity" placeholder="Type your activity">
+                    <label for="Status">Status:</label>
+                    <select id="Status" name="Status" required>
+                        <option value="">--Select Status--</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="nonbinary">Non-binary</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Start Date:</label>
+                    <input type="date" id="date" name="date" >
+                </div>
+                <div>
+                    <label for="date">End Date:</label>
+                    <input type="date" id="date" name="date" >
                 </div>
                 
-                <button type="submit">Submit <a href="student schedule.html"></a></button>
+                <button type="submit">Submit</a></button>
               </form>
         </div>
     </section>

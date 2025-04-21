@@ -9,9 +9,10 @@
     padding: 30px;
     border-radius: 15px;
     width: 100%;
-    max-width: 700px;
+    max-width: auto;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    height: auto;
+    max-height: auto;
+    height: 100%;
   }
 
   .user form h1{

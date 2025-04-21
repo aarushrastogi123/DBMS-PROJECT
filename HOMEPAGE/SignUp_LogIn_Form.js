@@ -55,3 +55,35 @@ document.addEventListener("DOMContentLoaded", () => {
           window.location.href = "homepage.html";}
   });
 });
+// GOOGLE login
+document.querySelector(".bxl-google").addEventListener("click", () => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+    .then(result => {
+      sessionStorage.setItem("loggedInUser", result.user.displayName);
+      window.location.href = "homepage.html";
+    })
+    .catch(err => alert("Google login failed: " + err.message));
+});
+
+// GITHUB login
+document.querySelector(".bxl-github").addEventListener("click", () => {
+  const provider = new firebase.auth.GithubAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+    .then(result => {
+      sessionStorage.setItem("loggedInUser", result.user.displayName);
+      window.location.href = "homepage.html";
+    })
+    .catch(err => alert("GitHub login failed: " + err.message));
+});
+
+// FACEBOOK login
+document.querySelector(".bxl-facebook").addEventListener("click", () => {
+  const provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+    .then(result => {
+      sessionStorage.setItem("loggedInUser", result.user.displayName);
+      window.location.href = "homepage.html";
+    })
+    .catch(err => alert("Facebook login failed: " + err.message));
+});
