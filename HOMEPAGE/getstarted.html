@@ -87,7 +87,7 @@
     </section>
     <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>
     <script>
-        // Scroll navbar styling
+        
         window.onscroll = function() {
             var navbar = document.getElementById("navbar");
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
@@ -97,17 +97,17 @@
             }
         };
         ddocument.getElementById("userForm").addEventListener("submit", function(e) {
-            e.preventDefault(); // Prevent the default form submission
+            e.preventDefault(); 
 
-            const role = document.getElementById("role").value; // Get the selected role
+            const role = document.getElementById("role").value; 
 
-            // Redirect based on the selected role
+            
             if (role === "Student") {
-                window.location.href = "student schedule.html"; // Redirect to student schedule
+                window.location.href = "student schedule.html";
             } else if (role === "Adult") {
-                window.location.href = "adult schedule.html"; // Redirect to adult schedule
+                window.location.href = "adult schedule.html";
             } else {
-                alert("Please select a role."); // Alert if no role is selected
+                alert("Please select a role."); 
             }
         });
     </script>
