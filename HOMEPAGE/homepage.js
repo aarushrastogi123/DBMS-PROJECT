@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     if (!user) {
       // Not logged in? Redirect to login page
-      window.location.href = "1 SignUp_LogIn_Form.html";
+      window.location.href = "SignUp_LogIn_Form.html";
     }
   
     // Handle logout
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       logoutLink.addEventListener("click", (e) => {
         e.preventDefault();
         sessionStorage.removeItem("loggedInUser");
-        window.location.href = "1 SignUp_LogIn_Form.html";
+        window.location.href = "SignUp_LogIn_Form.html";
       });
     }
   });
