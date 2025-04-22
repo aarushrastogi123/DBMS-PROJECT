@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="backgroundfile.css">
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="Untitled design1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav class="navbar" id="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="homepage.html">Self-Care Synergy</a></div>
+            <ul>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About</a>
+                    <div class="dropdown-content">
+                        <a href="mission.html">Our Mission</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="testimonials.html">Testimonials</a>
+                    </div>
+                </li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown"><a href="profile.html" class="dropbtn">Profile</a>
+                <div class="dropdown-content">
+                    <a href="SignUp_LogIn_Form.html">Log out</a>
+                </div></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="timetable">
+        <h1>Timetable</h1>
+        <table id="timetable">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleOutput">
+            </tbody>
+        </table>
+
+        <button onclick="window.location.href='adult schedule.html'">Edit Schedule</button>
+        <button onclick="window.location.href='goals.html'">Edit Goals</button>
+    </div>
+    <script>
+        const timeTable = new Array(24).fill("");
+    
+        // Activity categories
+        const fillers = {
+            hobbies: ["Drawing", "Reading", "Playing guitar", "Studying"],
+            nutrition: ["Meal Prep", "Hydration", "Fruit Break"],
+            exercise: ["Yoga", "Walk", "Gym"]
+        };
+    
+        // Get a random filler activity
+        function getRandomActivity() {
+            const categories = Object.keys(fillers);
+            const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+            const options = fillers[randomCategory];
+            return options[Math.floor(Math.random() * options.length)];
+        }
+    
+        // Fill hours from startHour (inclusive) to endHour (exclusive) with label
+        function fillTimeRange(startHour, endHour, label) {
+            for (let i = startHour; i < endHour; i++) {
+                timeTable[i % 24] = label; // wrap around for 0–23
+            }
+        }
+    
+        // Load saved schedule data
+        const data = JSON.parse(localStorage.getItem("adultSchedule")) || {};
+    
+        // Set Work time
+        if (data.workFrom && data.workTo) {
+            const start = parseInt(data.workFrom.split(":")[0]);
+            const end = parseInt(data.workTo.split(":")[0]);
+            fillTimeRange(start, end, "Work");
+        }
+    
+        // Set Family time
+        if (data.familyFrom && data.familyTo) {
+            const start = parseInt(data.familyFrom.split(":")[0]);
+            const end = parseInt(data.familyTo.split(":")[0]);
+            fillTimeRange(start, end, "Family Time");
+        }
+    
+        // Personal development at 8 PM
+        if (data.personalDevelopment) {
+            timeTable[20] = data.personalDevelopment;
+        }
+    
+        // Sleep from 10 PM to 7 AM
+        fillTimeRange(22, 24, "Sleep");
+        fillTimeRange(0, 6, "Sleep");
+    
+        // Fill remaining empty slots with random activities
+        for (let i = 0; i < 24; i++) {
+            if (!timeTable[i]) {
+                timeTable[i] = getRandomActivity();
+            }
+        }
+    
+        // Render the timetable into the table body
+        const scheduleOutput = document.getElementById("scheduleOutput");
+        for (let i = 0; i < 24; i++) {
+            const hour = `${String(i).padStart(2, '0')}:00 - ${String(i + 1).padStart(2, '0')}:00`;
+            const row = document.createElement("tr");
+            const activityCell = document.createElement("td");
+            const timeCell = document.createElement("td");
+    
+            activityCell.textContent = timeTable[i];
+            timeCell.textContent = hour;
+    
+            row.appendChild(activityCell);
+            row.appendChild(timeCell);
+            scheduleOutput.appendChild(row);
+        }
+    
+        // Scroll effect for navbar
+        window.onscroll = function () {
+            const navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        };
+    </script>
+    
+</body>
+</html>
