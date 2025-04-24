@@ -110,6 +110,45 @@
                 alert("Please select a role."); 
             }
         });
+
+        window.onscroll = function () {
+    var navbar = document.getElementById("navbar");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  };
+
+  document.getElementById("userForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const userData = {
+      firstName: document.getElementById("firstName").value.trim(),
+      lastName: document.getElementById("lastName").value.trim(),
+      age: document.getElementById("age").value.trim(),
+      phone: document.getElementById("phone").value.trim(),
+      role: document.getElementById("role").value,
+      gender: document.getElementById("gender").value,
+      email: document.getElementById("email").value.trim(),
+      submittedAt: new Date().toISOString()
+    };
+
+    // Store in localStorage
+    let users = JSON.parse(localStorage.getItem("selfcare_users")) || [];
+    users.push(userData);
+    localStorage.setItem("selfcare_users", JSON.stringify(users));
+
+
+    // Redirect based on role
+    if (userData.role === "Student") {
+      window.location.href = "student schedule.html";
+    } else if (userData.role === "Adult") {
+      window.location.href = "adult schedule.html";
+    } else {
+      alert("Please select a role.");
+    }
+  });
     </script>
     
 </body>

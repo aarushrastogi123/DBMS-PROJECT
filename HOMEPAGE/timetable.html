@@ -54,8 +54,12 @@
         const timeTable = new Array(24).fill("");
     
         // Activity categories
+        // Load the custom goal from localStorage
+        const customGoal = localStorage.getItem("userGoal") || "Playing guitar";
+
+        // Replace "Playing guitar" in fillers with the custom goal
         const fillers = {
-            hobbies: ["Drawing", "Reading", "Playing guitar", "Studying"],
+            hobbies: ["Drawing", "Reading", customGoal, "Studying"],
             nutrition: ["Meal Prep", "Hydration", "Fruit Break"],
             exercise: ["Yoga", "Walk", "Gym"]
         };
@@ -98,10 +102,16 @@
         }
     
         // Sleep from 10 PM to 7 AM
-        fillTimeRange(22, 24, "Sleep");
         fillTimeRange(0, 6, "Sleep");
-    
-        // Fill remaining empty slots with random activities
+        fillTimeRange(6, 7, "Gym");
+        fillTimeRange(7, 8, "Reading");
+        fillTimeRange(8, 9, "Breakfast");
+        fillTimeRange(9,17,"Working Hours");
+        fillTimeRange(13,14,"Break Hours");
+        fillTimeRange(17, 18, "Meal prep");
+        fillTimeRange(18, 20, "Family Hours");
+        fillTimeRange(20,22,customGoal)
+        fillTimeRange(22, 24, "Sleep");
         for (let i = 0; i < 24; i++) {
             if (!timeTable[i]) {
                 timeTable[i] = getRandomActivity();

@@ -66,18 +66,45 @@
     </section>
     <div style="height: 20px; padding: 20px; color: rgb(255, 255, 255);"></div>
     <script>
-        window.onscroll = function() {
-            var navbar = document.getElementById("navbar");
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
+        window.onscroll = function () {
+          var navbar = document.getElementById("navbar");
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
         };
-        document.querySelector("form").addEventListener("submit", function(e) {
-            e.preventDefault(); 
-            window.location.href = "goals.html"; 
+      
+        document.getElementById("adultScheduleForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+      
+          const schedule = {
+            workFrom: document.getElementById("workFrom").value,
+            workTo: document.getElementById("workTo").value,
+            priority: document.getElementById("priority").value.trim(),
+            familyFrom: document.getElementById("familyFrom").value,
+            familyTo: document.getElementById("familyTo").value,
+            otherActivity: document.getElementById("otherActivity").value.trim(),
+            submittedAt: new Date().toISOString()
+          };
+      
+          // Get existing users from localStorage
+          let users = JSON.parse(localStorage.getItem("selfcare_users")) || [];
+      
+          if (users.length === 0) {
+            alert("No user data found. Please complete the Get Started form first.");
+            return;
+          }
+      
+          // Append schedule to the most recent user (last in array)
+          users[users.length - 1].schedule = schedule;
+      
+          // Save back to localStorage
+          localStorage.setItem("selfcare_users", JSON.stringify(users));
+      
+          // Redirect
+          window.location.href = "goals.html";
         });
-    </script>
+      </script>   
 </body>
 </html>

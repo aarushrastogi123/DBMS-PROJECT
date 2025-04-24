@@ -79,6 +79,16 @@
             e.preventDefault(); 
             window.location.href = "procrastination.html"; 
         });
+        document.querySelector("form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const goal = document.getElementById("Goal Description").value.trim();
+        if (goal) {
+            localStorage.setItem("userGoal", goal);
+        }
+
+        window.location.href = "timetable.html"; 
+    });
     </script>
 </body>
 </html>
